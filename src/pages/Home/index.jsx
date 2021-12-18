@@ -17,7 +17,7 @@ const productDemo = {
 const Home = () => {
   return (
     <div className="home">
-      <h1>products</h1>
+      <h1>Products</h1>
       <ProductCard titulo={productDemo.title} image={productDemo.image} />
     </div>
   );
