@@ -1,29 +1,35 @@
+import { useEffect, useState } from 'react';
 import './style.css';
 import ProductCard from '../../components/ProductCard';
-
-const productDemo = {
-  id: 1,
-  title: 'Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops',
-  price: 109.95,
-  description:
-    'Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday',
-  category: "men's clothing",
-  image: 'https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg',
-  rating: {
-    rate: 3.9,
-    count: 120,
-  },
-};
+import getProducts from '../../services/products';
 
 const Home = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    // setProducts(getProducts);
+    // getProducts().then((data) => setProducts(data));
+    const fetchPruducts = async () => {
+      const product = await getProducts();
+      setProducts(product);
+    };
+    fetchPruducts();
+  }, []);
   return (
     <div className="home">
       <h2 className="home__title">Products</h2>
       <div className="home_container">
-        <ProductCard title={productDemo.title} image={productDemo.image} />
-        <ProductCard title={productDemo.title} image={productDemo.image} />
-        <ProductCard title={productDemo.title} image={productDemo.image} />
-        <ProductCard title={productDemo.title} image={productDemo.image} />
+        {products.length > 0 ? (
+          products.map((product) => (
+            <ProductCard
+              key={product.id}
+              title={product.title}
+              image={product.image}
+            />
+          ))
+        ) : (
+          <h2>loading...</h2>
+        )}
       </div>
     </div>
   );
