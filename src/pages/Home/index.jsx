@@ -1,3 +1,4 @@
+import './style.css';
 import ProductCard from '../../components/ProductCard';
 
 const productDemo = {
@@ -17,8 +18,13 @@ const productDemo = {
 const Home = () => {
   return (
     <div className="home">
-      <h1>Products</h1>
-      <ProductCard titulo={productDemo.title} image={productDemo.image} />
+      <h1 className="home__title">Products</h1>
+      <div className="home_container">
+        <ProductCard title={productDemo.title} image={productDemo.image} />
+        <ProductCard title={productDemo.title} image={productDemo.image} />
+        <ProductCard title={productDemo.title} image={productDemo.image} />
+        <ProductCard title={productDemo.title} image={productDemo.image} />
+      </div>
     </div>
   );
 };

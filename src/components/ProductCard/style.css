@@ -1,0 +1,38 @@
+.productCard {
+  width: 100%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+.productCard__border {
+  border: solid 1px gray;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.productCard__img {
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+}
+
+.productCard__title {
+  text-align: center;
+}
+
+.productCard__buttonCount {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: 576px) {
+  .productCard {
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .productCard {
+    width: 33%;
+  }
+}
