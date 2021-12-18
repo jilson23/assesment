@@ -1,10 +1,9 @@
 import './App.css';
-import Home from './components/Home';
+import Home from './pages/Home';
 
 const App = () => {
   return (
     <div className="App">
-      <header className="App-header" />
       <Home />
     </div>
   );
