@@ -18,7 +18,7 @@ const productDemo = {
 const Home = () => {
   return (
     <div className="home">
-      <h1 className="home__title">Products</h1>
+      <h2 className="home__title">Products</h2>
       <div className="home_container">
         <ProductCard title={productDemo.title} image={productDemo.image} />
         <ProductCard title={productDemo.title} image={productDemo.image} />
