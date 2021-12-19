@@ -17,6 +17,7 @@
   margin: 0 auto;
   display: block;
   height: 500px;
+  object-fit: contain;
 }
 .productDetail__info {
   width: 100%;
