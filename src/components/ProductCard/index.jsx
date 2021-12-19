@@ -5,9 +5,11 @@ const ProductCard = ({ title, image }) => {
   return (
     <div className="productCard">
       <div className="productCard__border">
-        <img className="productCard__img" src={image} alt="" />
-        <h2 className="productCard__title">{title}</h2>
-        <div className="productCard__buttonCount">
+        <div className="productCard__body">
+          <img className="productCard__img" src={image} alt="" />
+          <h3 className="productCard__title">{title}</h3>
+        </div>
+        <div className="productCard__footer">
           <span className="productCard__counter">00:00:00</span>
           <button className="productCard__button" type="button">
             Go to Details

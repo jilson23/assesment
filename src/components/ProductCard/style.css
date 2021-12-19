@@ -7,20 +7,26 @@
 .productCard__border {
   border: solid 1px gray;
   border-radius: 1rem;
+  box-sizing: border-box;
   padding: 1rem;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .productCard__img {
-  width: 50%;
+  max-width: 100%;
   margin: 0 auto;
   display: block;
+  height: 200px;
 }
 
 .productCard__title {
   text-align: center;
 }
 
-.productCard__buttonCount {
+.productCard__footer {
   display: flex;
   justify-content: space-between;
 }
