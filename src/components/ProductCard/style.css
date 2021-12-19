@@ -29,6 +29,15 @@
 .productCard__footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.productCard__link {
+  background-color: #057bce;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
 }
 
 @media (min-width: 576px) {

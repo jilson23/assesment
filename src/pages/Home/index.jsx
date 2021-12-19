@@ -7,8 +7,6 @@ const Home = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    // setProducts(getProducts);
-    // getProducts().then((data) => setProducts(data));
     const fetchPruducts = async () => {
       const product = await getProducts();
       setProducts(product);
@@ -23,6 +21,7 @@ const Home = () => {
           products.map((product) => (
             <ProductCard
               key={product.id}
+              id={product.id}
               title={product.title}
               image={product.image}
             />

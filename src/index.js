@@ -15,7 +15,17 @@ ReactDOM.render(
         <Route path="/" element={<App />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
-          <Route path="productdetail" element={<Productdetail />} />
+          <Route path="productdetail" element={<Productdetail />}>
+            <Route path=":id" element={<Productdetail />} />
+          </Route>
+          <Route
+            path="*"
+            element={
+              <main style={{ padding: '1rem' }}>
+                <p>There`s nothing here!</p>
+              </main>
+            }
+          />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -6,8 +6,7 @@ const App = () => {
     <div className="App">
       <h1 className="App__title">Assesment</h1>
       <nav className="App__menu">
-        <Link to="/">Home</Link> | <Link to="/about">About</Link> |{' '}
-        <Link to="/productdetail">Productdetail</Link>
+        <Link to="/">Home</Link> | <Link to="/about">About</Link>
       </nav>
       <Outlet />
     </div>
