@@ -41,6 +41,14 @@
   text-decoration: none;
 }
 
+.productCard__link--disable {
+  color: black;
+  background-color: gray;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
 @media (min-width: 576px) {
   .productCard {
     width: 50%;
