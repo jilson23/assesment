@@ -7,6 +7,12 @@
   flex-wrap: wrap;
 }
 
+.productDetail__loading {
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
 .productDetail__containerImage {
   width: 100%;
   padding: 1rem;
