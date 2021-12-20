@@ -1,4 +1,3 @@
-/* eslint-disable */
 import './style.css';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
@@ -8,7 +7,7 @@ import { secondsToString, random } from './functions';
 const ProductCard = ({ title, image, id }) => {
   const [time, setTime] = useState(random(5, 80));
 
-  let intervalRef = useRef();
+  const intervalRef = useRef();
   const decreaseNum = () => setTime((prev) => prev - 1);
   useEffect(() => {
     if (time > 0) {

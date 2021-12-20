@@ -1,0 +1,29 @@
+.about {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.about__img {
+  border-radius: 50%;
+}
+.about__lista {
+  display: inline-block;
+  text-align: left;
+}
+
+.about__titleList {
+  margin: 0;
+}
+.about__button {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  color: white;
+  background-color: #057bce;
+  border-radius: 0.5rem;
+}
+
+.about__button--github {
+  background-color: #0caf42;
+}
