@@ -1,6 +1,6 @@
 const url = 'https://fakestoreapi.com/';
 
-const getProducts = async () => {
+export const getProducts = async () => {
   try {
     const res = await fetch(`${url}/products`);
     const data = await res.json();
@@ -9,8 +9,6 @@ const getProducts = async () => {
     return console.error(error);
   }
 };
-
-export default getProducts;
 
 export const getProductsId = async (id) => {
   try {

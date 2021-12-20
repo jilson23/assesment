@@ -3,27 +3,13 @@ import './style.css';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { useRef, useEffect, useState } from 'react';
+import { secondsToString, random } from './functions';
 
 const ProductCard = ({ title, image, id }) => {
-  const random = (min, max) => {
-    return Math.floor(Math.random() * (max - min + 1) + min);
-  };
-
   const [time, setTime] = useState(random(5, 80));
 
   let intervalRef = useRef();
   const decreaseNum = () => setTime((prev) => prev - 1);
-
-  const secondsToString = (seconds) => {
-    let hour = Math.floor(seconds / 3600);
-    hour = hour < 10 ? '0' + hour : hour;
-    let minute = Math.floor((seconds / 60) % 60);
-    minute = minute < 10 ? '0' + minute : minute;
-    let second = seconds % 60;
-    second = second < 10 ? '0' + second : second;
-    return hour + ':' + minute + ':' + second;
-  };
-
   useEffect(() => {
     if (time > 0) {
       intervalRef.current = setInterval(decreaseNum, 1000);
@@ -39,7 +25,6 @@ const ProductCard = ({ title, image, id }) => {
           <h3 className="productCard__title">{title}</h3>
         </div>
         <div className="productCard__footer">
-          {/* <span className="productCard__counter">00:00:00</span> */}
           <span className="productCard__counter">{secondsToString(time)}</span>
           {time > 0 ? (
             <Link className="productCard__link" to={`/productdetail/${id}`}>
